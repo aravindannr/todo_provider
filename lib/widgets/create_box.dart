@@ -4,7 +4,7 @@ import 'package:provider/provider.dart';
 
 import '../controller/Provider.dart';
 
-class Alert_Box extends StatelessWidget {
+class Create_box extends StatelessWidget {
   TextEditingController _controller = TextEditingController();
 
   @override
