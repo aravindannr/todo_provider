@@ -27,7 +27,7 @@ class Alert_Box extends StatelessWidget {
               children: [
                 ElevatedButton(
                     onPressed: () {
-                      Provider.of<Provider_1>(context,listen: false).addTask();
+                      Provider.of<Provider_1>(context,listen: false).addTask(_controller.text);
                       _controller.clear();
                       Navigator.of(context).pop();
                     },
