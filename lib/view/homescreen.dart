@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:provider/provider.dart';
 
 import '../controller/Provider.dart';
+import '../widgets/alert_box.dart';
 
 class Homescreen extends StatelessWidget {
   @override
@@ -15,7 +15,11 @@ class Homescreen extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Provider.of<Provider_1>(context, listen: false).showAlert(context);
+          showDialog(
+              context: context,
+              builder: (BuildContext context) {
+                return Alert_Box();
+              });
         },
         child: Icon(Icons.add),
       ),
